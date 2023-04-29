@@ -29,6 +29,8 @@ jobs:
 
     - name: Check out code
       uses: actions/checkout@v3
+
+    - name: build maven
       uses: actions/setup-java@v3
       with:
         java-version: '17'
