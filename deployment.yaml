@@ -21,7 +21,7 @@ spec:
       containers:
       - name: aws-demo-01
         image: 529987245700.dkr.ecr.us-east-1.amazonaws.com/xgileit
-		imagePullPolicy: IfNotPresent
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
         readinessProbe:
