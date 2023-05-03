@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment # Kubernetes resource kind we are creating
+metadata:
+  name: aws-demo-01
+spec:
+  selector:
+    matchLabels:
+      app: aws-demo-01
+  replicas: 2 # Number of replicas that will be created for this deployment
+  template:
+    metadata:
+      labels:
+        app: aws-demo-01
+    spec:
+      containers:
+        - name: aws-demo-01
+          image: 529987245700.dkr.ecr.us-east-1.amazonaws.com/xgileit # Image that will be used to containers in the cluster
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080 # The port that the container is running on in the cluster
