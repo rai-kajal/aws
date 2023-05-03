@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: aws-demo
+spec:
+
+  containers:
+  - name: aws-demo
+    image: kajalrai/aws:latest
+    ports:
+    - containerPort: 8080
